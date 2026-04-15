@@ -1,0 +1,47 @@
+{
+  "business_name": "Amy Wade and Co Real Estate Team",
+  "tagline": "",
+  "wp_title_tagline": "",
+  "owner_name": "",
+  "domain": "www.buyselledmondhomes.com",
+  "skin": "trades-authority",
+  "phone": "",
+  "address": {
+    "street": "",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "zip": ""
+  },
+  "city": "Oklahoma City",
+  "state": "OK",
+  "license": "",
+  "gbp_primary_category": "Real estate agency",
+  "emergency_available": false,
+  "hours": "",
+  "meta_description_default": "",
+  "stats": {
+    "years_in_business": null,
+    "jobs_completed": null,
+    "avg_rating": null,
+    "review_count": null,
+    "response_time": null
+  },
+  "social": {
+    "facebook": null,
+    "instagram": null,
+    "google": null
+  },
+  "hubs": [],
+  "services": [],
+  "service_areas": [
+    "Mustang","Edmond","Jones","Bethany","Midwest City","Forest Park",
+    "Nichols Hills","Del City","Warr Acres","The Village","Piedmont",
+    "Moore","Yukon","Newcastle","Nicoma Park","Hall Park","Harrah",
+    "Norman","Choctaw","Spencer"
+  ],
+  "differentiators": [],
+  "process_steps": [],
+  "testimonials": [],
+  "gallery_items": [],
+  "primary_color": "#e8520a"
+}
