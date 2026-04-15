@@ -1,0 +1,62 @@
+import { Figtree, Instrument_Serif } from 'next/font/google';
+import { getSiteConfig, getPrimaryColorStyle } from '@/lib/site-config';
+import Nav from '@/components/layout/Nav';
+import TopBar from '@/components/layout/TopBar';
+import Footer from '@/components/layout/Footer';
+import StickyCallBar from '@/components/layout/StickyCallBar';
+import '@/styles/themes/local-authority.css';
+import './globals.css';
+
+// Zero-CLS font loading via next/font — no runtime Google Fonts call
+const figtree = Figtree({
+  subsets: ['latin'],
+  variable: '--font-figtree',
+  weight: ['300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  variable: '--font-instrument',
+  weight: '400',
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
+export async function generateMetadata() {
+  const config = getSiteConfig();
+  return {
+    metadataBase: new URL(`https://${config.domain ?? 'example.com'}`),
+    title: {
+      default: `${config.business_name} | ${config.wp_title_tagline ?? config.tagline ?? ''}`,
+      template: `%s | ${config.business_name}`,
+    },
+    description: config.meta_description_default ?? '',
+    robots: { index: true, follow: true },
+    openGraph: {
+      type: 'website',
+      siteName: config.business_name,
+    },
+  };
+}
+
+export default function RootLayout({ children }) {
+  const config = getSiteConfig();
+  const primaryColorStyle = getPrimaryColorStyle(config);
+
+  return (
+    <html lang="en" className={`${figtree.variable} ${instrumentSerif.variable}`}>
+      <head>
+        {/* Inject client brand color over the skin default */}
+        <style dangerouslySetInnerHTML={{ __html: primaryColorStyle }} />
+      </head>
+      <body style={{ fontFamily: 'var(--font-body), sans-serif' }}>
+        <TopBar config={config} />
+        <Nav config={config} />
+        <main>{children}</main>
+        <Footer config={config} />
+        <StickyCallBar config={config} />
+      </body>
+    </html>
+  );
+}

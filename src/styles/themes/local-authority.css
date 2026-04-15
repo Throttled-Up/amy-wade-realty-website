@@ -1,0 +1,65 @@
+/*
+ * Local Authority skin — warm cream, editorial serif headlines, clean modern
+ * Target niches: pest control, HVAC, plumbing, lawn care, home services
+ *
+ * Design language: editorial warmth. Borrowed from premium home/lifestyle brands.
+ * Instrument Serif for display headlines. Figtree for all UI text.
+ * Warm cream surfaces instead of cold white. Near-black instead of pure black.
+ */
+
+:root {
+  /* Brand accent — overwritten per client */
+  --color-primary:       #16803c;  /* deep green default — change per client */
+  --color-primary-dark:  #15532e;
+  --color-primary-light: #dcfce7;  /* tint for badges / chips */
+
+  /* Surfaces — warm cream palette */
+  --color-hero-bg:    #faf8f4;
+  --color-surface:    #faf8f4;
+  --color-surface-2:  #f0ece4;
+  --color-surface-3:  #e8e2d8;
+  --color-footer-bg:  #1c1917;
+
+  /* Text — warm near-black, not pure #000 */
+  --color-text-heading: #1c1917;
+  --color-text-body:    #44403c;
+  --color-text-muted:   #78716c;
+  --color-text-inverse: #faf8f4;
+
+  /* Borders */
+  --color-border:       #e7e0d6;
+  --color-border-dark:  #d0c9be;
+
+  /* Cards */
+  --radius-card:       12px;
+  --shadow-card:       0 1px 4px rgba(28,25,23,0.06), 0 4px 16px rgba(28,25,23,0.08);
+  --shadow-card-hover: 0 4px 8px rgba(28,25,23,0.08), 0 12px 32px rgba(28,25,23,0.14);
+
+  /* Layout */
+  --max-width-content:  1200px;
+  --section-padding-y:  88px;
+  --section-padding-y-sm: 52px;
+
+  /* Top bar */
+  --color-topbar-bg:   #1c1917;
+  --color-topbar-text: #d6cfc6;
+
+  /* Typography */
+  --font-display: var(--font-instrument), 'Georgia', serif;
+  --font-body:    var(--font-figtree), system-ui, sans-serif;
+  --font-heading: var(--font-figtree), system-ui, sans-serif;
+
+  /* Buttons */
+  --btn-radius: 6px;
+
+  /* Nav — light cream navigation bar */
+  --color-nav-bg:          rgba(250,248,244,0.92);
+  --color-nav-bg-scrolled: rgba(250,248,244,0.98);
+  --color-nav-text:        #44403c;
+  --color-nav-text-hover:  #1c1917;
+  --color-nav-shadow:      0 1px 0 #e7e0d6, 0 4px 12px rgba(28,25,23,0.06);
+  --color-nav-mobile-bg:   #faf8f4;
+  --color-nav-mobile-border: #e7e0d6;
+  --color-nav-mobile-link: #1c1917;
+  --color-nav-mobile-divider: #e7e0d6;
+}
